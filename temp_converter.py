@@ -15,16 +15,22 @@ def convert(): #Perfroms conversions
             f2k = (temp_val+459.67)*(5/9)
             result_label_1.config(text = f2c)
             result_label_2.config(text = f2k)
+            temp_desc1.config(text = "celcius:")
+            temp_desc2.config(text = "kelvin:")
         elif dropdown_variable.get() == "celcius": #Convert from celcius
             c2f = temp_val*(9/5)+32
             c2k = temp_val+273.15
             result_label_1.config(text = c2f)
             result_label_2.config(text = c2k)
+            temp_desc1.config(text = "farenheight:")
+            temp_desc2.config(text = "kelvin:")
         else:                                      #Convert from kelvin
             k2f = temp_val*(9/5)-459.67
             k2c = temp_val-273.15
             result_label_1.config(text = k2f)
             result_label_2.config(text = k2c)
+            temp_desc1.config(text = "farenheight:")
+            temp_desc2.config(text = "celcius:")
 
 '''
 frame1 = tk.Frame(root, width = 300, height = 200, background="bisque")
